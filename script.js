@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const spinner = document.getElementById("spinner");
 
     function hideSpinner() {
-        spinner.classList.add("hidden"); // Use the "hidden" class as defined in your CSS
+        spinner.classList.add("hidden");
     }
 
     // Hide spinner once the window is fully loaded
