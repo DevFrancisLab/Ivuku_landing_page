@@ -42,7 +42,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero d-flex align-items-center text-white text-center p-5">
+    <section class="hero d-flex align-items-center text-white text-center p-5" id="home">
         <div class="container d-flex">
             <div class="hero-content d-block w-100 p-7">
                 <h1>Rent Collection and Property Management Made Easy</h1>
@@ -57,7 +57,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about py-5">
+    <section class="about py-5" id="about">
         <div class="container text-center">
             <h2>Made For Landlords and Property Managers</h2>
             <p>A world-class solution with all the tools that landlords and property managers need to manage property effortlessly.</p>
@@ -79,7 +79,7 @@
     </section>
 
     <!-- Feature Section -->
-    <section class="feature">
+    <section class="feature" id="features">
         <div class="container">
             <h2 class="feature-title">Features</h2>
             <p class="feature-description">Ivuku is developed with landlords' and property managers' needs in mind. The solutions we offer are ...</p>
@@ -140,8 +140,12 @@
                         <input type="text" id="email" name="email" required>
                     </div>
                     <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="phone" id="phone" name="phone" placeholder="+254712345678" required>
+                    </div>
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="password" name="password" required>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="submit-btn">Submit</button>
@@ -164,8 +168,9 @@
             </div>
             <div class="footer-socials d-flex">
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">Features</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
                     <a href="#">Pricing</a>
                 </div>
                 <div class="footer-social">
