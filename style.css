@@ -28,6 +28,7 @@ body {
 
 .navbar {
     background-color: var(--primary);
+    color: var(--light);
     position: fixed;
     width: 100%;
     top: 0;
@@ -42,8 +43,8 @@ body {
 
 .navbar-brand {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     text-align: center;
     gap: 4px;
     padding: 0;
@@ -69,6 +70,33 @@ body {
     text-transform: uppercase;
     font-size: 2.5rem; /* Larger for better alignment */
 }
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #EFF5FF;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #ffffff;
+    color: #007bff; /* Toggle button color */
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 
 .hero {
     background-color: var(--primary);
@@ -470,13 +498,6 @@ body {
 }
 
 @media only screen and (max-width: 980px) {
-    .navbar .head-bar {
-        max-width: 320px;
-        padding: 0 7px;
-    }
-    .header-nav {
-        padding: 10px 28px;
-    }
     .navbar-brand img{
         width: 28px;
         height: 28px;
