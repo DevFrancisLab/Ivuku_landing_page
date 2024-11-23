@@ -79,12 +79,40 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     outline: none;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease; 
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: rgb(22, 20, 20);
+/* Add underline animation using ::after pseudo-element */
+.navbar .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(116, 79, 10);
+    transition: width 0.3s ease-in-out;
 }
+
+/* On hover, animate the underline */
+.navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Change text color on hover */
+.navbar .navbar-nav .nav-link:hover {
+    color: rgb(116, 79, 10);
+}
+
+/* Style the active link */
+.navbar .navbar-nav .nav-link.active {
+    color: rgb(66, 13, 13);
+    font-weight: bold;
+}
+
+
 
 .navbar-toggler {
     border: none;
