@@ -39,3 +39,18 @@ document.addEventListener('scroll', function () {
         navbar.classList.remove('scrolled');
     }
 });
+
+// closing humberger when link clicked
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link, .btn-primary");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+            if (navbarCollapse.classList.contains("show")) {
+                navbarToggler.click();
+            }
+        });
+    });
+});
