@@ -83,7 +83,7 @@ body {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: #EFF5FF;
+    color: rgb(22, 20, 20);
 }
 
 .navbar-toggler {
