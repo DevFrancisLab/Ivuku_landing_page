@@ -162,7 +162,9 @@
 
     <!-- Register Section -->
     <section class="register-section" id="register">
+        <h3 class="text-center text-light">Register To Get Started</h3>
         <div class="container">
+            <!--<p class="text-center">Join us today by filling out the form below!</p>-->
             <div id="hubspot-form-container"></div> <!-- This div will hold the HubSpot form -->
         </div>
     </section>
@@ -170,14 +172,14 @@
     <!--footer section-->
     <section class="footer">
         <div class="container">
-            <div class="footer-newsletter d-flex">
+            <div class="footer-newsletter">
                 <div class="w-100">
                     <h3>Subscribe to Our Newsletters</h3>
                 </div>
-                <form action="#" method="POST" class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">SUBSCRIBE NOW</button>
-                </form>
+                <div class="newsletter-form-container" style="width: 100%;"> 
+                    <!-- HubSpot form will be injected here -->
+                    <div id="hubspot-newsletter-form"></div>
+                </div>
             </div>
             <div class="footer-socials d-flex">
                 <div class="footer-links">
@@ -217,11 +219,22 @@
 
     <!-- HubSpot embed code -->
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+    <!--hubspot for registration form-->
     <script>
         hbspt.forms.create({
             portalId: "48049870",
             formId: "5ae321ea-fe86-490b-93d0-94b80e5e4075",
-            target: "#hubspot-form-container"
+            target: "#hubspot-form-container",
+        });
+    </script>
+
+    <!--hubspot for newsletter subscription-->
+    <script>
+        hbspt.forms.create({
+            portalId: "48049870",
+            formId: "22a25a82-3ba6-46c5-a52d-13066589fba6",
+            target: "#hubspot-newsletter-form"
         });
     </script>
 
